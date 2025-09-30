@@ -65,12 +65,12 @@ img{
 
 .main-img{
     position: relative;
-    justify-items: center;
 }
 .button-box{
     position: relative;
     display: flex;
     justify-content: center;
+   
 }
 .main-img .add-cart{
     background-color: hsl(20, 50%, 98%);
@@ -159,7 +159,7 @@ img{
 }
 .cart-img{
     width: 160px;
-    justify-self: center;
+    margin: auto;
     padding-block: 10px;
 }
 #cart-img.show{
