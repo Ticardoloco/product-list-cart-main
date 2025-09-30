@@ -69,6 +69,8 @@ img{
 }
 .button-box{
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 .main-img .add-cart{
     background-color: hsl(20, 50%, 98%);
