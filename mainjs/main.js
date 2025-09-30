@@ -193,10 +193,15 @@ function newOrder() {
         btn.classList.remove('show');
 
     })
+    
     cartItems.splice(0)
 
     document.body.style.overflow = 'scroll';
     cartDisplayItems()
+
+    document.querySelectorAll('.count').forEach((touch) => {
+            touch.innerHTML = 1;
+    })
 }
 
 
