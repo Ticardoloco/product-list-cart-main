@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <title>Frontend Mentor | Product list with cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <section id="hero">
+        <div class="hero-container">
+            <div class="main-hero">
+                <h2>Desserts</h2>
+                <div class="main-container">
+                    <div class="main-card" id="main-card">
+                        <div class="main-img">
+                            <img src="img/image-waffle-desktop.jpg" alt="image-waffle-desktop" class="desktop-img" width="250" height="250">
+                            <img src="img/image-waffle-tablet.jpg" alt="image-waffle-tablet" class="tablet-img" width="250" height="250">
+                            <img src="img/image-waffle-mobile.jpg" alt="image-waffle-mobile" class="mobile-img" width="250" height="250">
+                           <div class="button-box">
+                             <button onclick="addToCart('Waffle with Berries', 6.50, 'Waffle')" class="add-cart">
+                                <img src="img/icon-add-to-cart.svg" alt="icon-add-to-cart">
+                                <p> Add to Cart</p>
+                            </button>
+                            <div class="utility-btn" data-id="Waffle">
+                                <div class="minus-btn">
+                                    <img src="/img/icon-decrement-quantity.svg" alt="icon-decrement-quantity" onclick="subCart('Waffle')">
+                                </div>
+                                <p class="count" data-id="Waffle">1</p>
+                                <div class="plus-btn">
+                                    <img src="/img/icon-increment-quantity.svg" alt="icon-decrement-quantity" onclick="addCart('Waffle')" >
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                        <div class="main-details">
+                                <p>Waffle</p>
+                                <h4>Waffle with Berries</h4>
+                                <span id="price">$6.50</span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="main-card" id="main-card">
+                        <div class="main-img">
+                            <img src="img/image-creme-brulee-desktop.jpg" alt="image-creme-brulee-desktop" class="desktop-img" width="250" height="250">
+                            <img src="img/image-creme-brulee-tablet.jpg" alt="image-creme-brulee-tablet" class="tablet-img" width="250" height="250">
+                            <img src="img/image-creme-brulee-mobile.jpg" alt="image-creme-brulee-mobile" class="mobile-img" width="250" height="250">
+                
+                             <div class="button-box">
+                             <button onclick="addToCart('Vanilla Bean Crème Brûlée', 7.00, 'Brûlée')" class="add-cart">
+                                <img src="img/icon-add-to-cart.svg" alt="icon-add-to-cart">
+                                <p> Add to Cart</p>
+                            </button>
+                            <div class="utility-btn" data-id="Brûlée">
+                                <div class="minus-btn">
+                                    <img src="/img/icon-decrement-quantity.svg" alt="icon-decrement-quantity" onclick="subCart('Brûlée')">
+                                </div>
+                                <p class="count" data-id="Brûlée">1</p>
+                                <div class="plus-btn">
+                                    <img src="/img/icon-increment-quantity.svg" alt="icon-decrement-quantity" onclick="addCart('Brûlée')" >
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                        <div class="main-details">
+                                <p>Crème Brûlée</p>
+                                <h4>Vanilla Bean Crème Brûlée</h4>
+                                <span id="price">$7.00</span>
+                        </div>
+                    </div>
+
+                    <div class="main-card" id="main-card">
+                        <div class="main-img">
+                            <img src="img/image-macaron-desktop.jpg" alt="image-macaron-desktop" class="desktop-img" width="250" height="250">
+                            <img src="img/image-macaron-tablet.jpg" alt="image-macaron-tablet" class="tablet-img" width="250" height="250">
+                            <img src="img/image-macaron-mobile.jpg" alt="image-macaron-mobile" class="mobile-img" width="250" height="250">
+                           
+                             <div class="button-box">
+                              <button onclick="addToCart('Macaron Mix of Five', 8.00, 'Macaron')" class="add-cart">
+                                <img src="img/icon-add-to-cart.svg" alt="icon-add-to-cart">
+                                <p> Add to Cart</p>
+                            </button>
+
+                            <div class="utility-btn" data-id="Macaron">
+                                <div class="minus-btn">
+                                    <img src="/img/icon-decrement-quantity.svg" alt="icon-decrement-quantity" onclick="subCart('Macaron')">
+                                </div>
+                                <p class="count" data-id="Macaron">1</p>
+                                <div class="plus-btn">
+                                    <img src="/img/icon-increment-quantity.svg" alt="icon-decrement-quantity" onclick="addCart('Macaron')" >
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                        <div class="main-details">
+                                <p>Macaron</p>
+                                <h4>Macaron Mix of Five</h4>
+                                <span id="price">$8.00</span>
+                        </div>
+                    </div>
+
+                    <div class="main-card" id="main-card">
+                        <div class="main-img">
+                             <img src="img/image-tiramisu-desktop.jpg" alt="image-tiramisu-desktop" class="desktop-img" width="250" height="250">
+                            <img src="img/image-tiramisu-tablet.jpg" alt="image-tiramisu-tablet" class="tablet-img" width="250" height="250">
+                            <img src="img/image-tiramisu-mobile.jpg" alt="image-tiramisu-mobile" class="mobile-img" width="250" height="250">
+                            
+
+                            <div class="button-box">
+                             <button onclick="addToCart('Classic Tiramisu', 5.50, 'Classic')" class="add-cart">
+                                <img src="img/icon-add-to-cart.svg" alt="icon-add-to-cart">
+                                <p> Add to Cart</p>
+                            </button>
+
+                            <div class="utility-btn" data-id="Classic">
+                                <div class="minus-btn">
+                                    <img src="/img/icon-decrement-quantity.svg" alt="icon-decrement-quantity" onclick="subCart('Classic')">
+                                </div>
+                                <p class="count" data-id="Classic">1</p>
+                                <div class="plus-btn">
+                                    <img src="/img/icon-increment-quantity.svg" alt="icon-decrement-quantity" onclick="addCart('Classic')" >
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                        <div class="main-details">
+                                <p>Tiramisu</p>
+                                <h4>Classic Tiramisu</h4>
+                                <span id="price">$5.50</span>
+                        </div>
+                    </div>
+
+                    <div class="main-card" id="main-card">
+                        <div class="main-img">
+                           <img src="img/image-baklava-desktop.jpg" alt="image-baklava-desktop" class="desktop-img" width="250" height="250">
+                            <img src="img/image-baklava-tablet.jpg" alt="image-baklava-tablet" class="tablet-img" width="250" height="250">
+                            <img src="img/image-baklava-mobile.jpg" alt="image-baklava-mobile" class="mobile-img" width="250" height="250">
+                            
+
+                             <div class="button-box">
+                             <button onclick="addToCart('Pistachio Baklava', 4.00, 'Pistachio')" class="add-cart">
+                                <img src="img/icon-add-to-cart.svg" alt="icon-add-to-cart">
+                                <p> Add to Cart</p>
+                            </button>
+
+                            <div class="utility-btn" data-id="Pistachio">
+                                <div class="minus-btn">
+                                    <img src="/img/icon-decrement-quantity.svg" alt="icon-decrement-quantity" onclick="subCart('Pistachio')">
+                                </div>
+                                <p class="count" data-id="Pistachio">1</p>
+                                <div class="plus-btn">
+                                    <img src="/img/icon-increment-quantity.svg" alt="icon-decrement-quantity" onclick="addCart('Pistachio')" >
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                        <div class="main-details">
+                                <p>Baklava</p>
+                                <h4>Pistachio Baklava</h4>
+                                <span id="price">$4.00</span>
+                        </div>
+                    </div>
+
+                    <div class="main-card" id="main-card">
+                        <div class="main-img">
+                            <img src="img/image-meringue-desktop.jpg" alt="image-meringue-desktop" class="desktop-img" width="250" height="250">
+                            <img src="img/image-meringue-tablet.jpg" alt="image-meringue-tablet" class="tablet-img" width="250" height="250">
+                            <img src="img/image-meringue-mobile.jpg" alt="image-meringue-mobile" class="mobile-img" width="250" height="250">
+                           
+                             <div class="button-box">
+                              <button onclick="addToCart('Lemon Meringue Pie', 5.00, 'Lemon')" class="add-cart">
+                                <img src="img/icon-add-to-cart.svg" alt="icon-add-to-cart">
+                                <p> Add to Cart</p>
+                            </button>
+
+
+                            <div class="utility-btn" data-id="Lemon">
+                                <div class="minus-btn">
+                                    <img src="/img/icon-decrement-quantity.svg" alt="icon-decrement-quantity" onclick="subCart('Lemon')">
+                                </div>
+                                <p class="count" data-id="Lemon">1</p>
+                                <div class="plus-btn">
+                                    <img src="/img/icon-increment-quantity.svg" alt="icon-decrement-quantity" onclick="addCart('Lemon')" >
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                        <div class="main-details">
+                                <p>Pie</p>
+                                <h4>Lemon Meringue Pie</h4>
+                                <span id="price">$5.00</span>
+                        </div>
+                    </div>
+
+                    <div class="main-card" id="main-card">
+                        <div class="main-img">
+                            <img src="img/image-cake-desktop.jpg" alt="image-cake-desktop" class="desktop-img" width="250" height="250">
+                            <img src="img/image-cake-tablet.jpg" alt="image-cake-tablet" class="tablet-img" width="250" height="250">
+                            <img src="img/image-cake-mobile.jpg" alt="image-cake-mobile" class="mobile-img" width="250" height="250">
+                            
+
+                             <div class="button-box">
+                              <button onclick="addToCart('Red Velvet Cake', 4.50, 'red')" class="add-cart">
+                                <img src="img/icon-add-to-cart.svg" alt="icon-add-to-cart">
+                                <p> Add to Cart</p>
+                            </button>
+                            <div class="utility-btn" data-id="red">
+                                <div class="minus-btn">
+                                    <img src="/img/icon-decrement-quantity.svg" alt="icon-decrement-quantity" onclick="subCart('red')">
+                                </div>
+                                <p class="count" data-id="red">1</p>
+                                <div class="plus-btn">
+                                    <img src="/img/icon-increment-quantity.svg" alt="icon-decrement-quantity" onclick="addCart('red')" >
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                        <div class="main-details">
+                                <p>Cake</p>
+                                <h4>Red Velvet Cake</h4>
+                                <span id="price">$4.50</span>
+                        </div>
+                    </div>
+
+                    <div class="main-card" id="main-card">
+                        <div class="main-img">
+                            <img src="img/image-brownie-desktop.jpg" alt="image-brownie-desktop" class="desktop-img" width="250" height="250">
+                            <img src="img/image-brownie-tablet.jpg" alt="image-brownie-tablet" class="tablet-img" width="250" height="250">
+                            <img src="img/image-brownie-mobile.jpg" alt="image-brownie-mobile" class="mobile-img" width="250" height="250">
+                            
+
+                            <div class="button-box">
+                              <button onclick="addToCart('Salted Caramel Brownie', 4.50, 'Salted')" class="add-cart">
+                                <img src="img/icon-add-to-cart.svg" alt="icon-add-to-cart">
+                                <p> Add to Cart</p>
+                            </button>
+                            <div class="utility-btn" data-id="Salted">
+                                <div class="minus-btn">
+                                    <img src="/img/icon-decrement-quantity.svg" alt="icon-decrement-quantity" onclick="subCart('Salted')">
+                                </div>
+                                <p class="count" data-id="Salted">1</p>
+                                <div class="plus-btn">
+                                    <img src="/img/icon-increment-quantity.svg" alt="icon-decrement-quantity" onclick="addCart('Salted')" >
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                        <div class="main-details">
+                                <p>Brownie</p>
+                                <h4>Salted Caramel Brownie</h4>
+                                <span id="price">$4.50</span>
+                        </div>
+                    </div>
+
+                    <div class="main-card" id="main-card">
+                        <div class="main-img">
+                            <img src="img/image-panna-cotta-desktop.jpg" alt="image-panna-cotta-desktop" class="desktop-img" width="250" height="250">
+                            <img src="img/image-panna-cotta-tablet.jpg" alt="image-panna-cotta-tablet" class="tablet-img" width="250" height="250">
+                            <img src="img/image-panna-cotta-mobile.jpg" alt="image-panna-cotta-mobile" class="mobile-img" width="250" height="250">
+                            
+
+                            <div class="button-box">
+                              <button onclick="addToCart('Vanilla Panna Cotta', 6.50, 'vanilla')" class="add-cart">
+                                <img src="img/icon-add-to-cart.svg" alt="icon-add-to-cart">
+                                <p> Add to Cart</p>
+                            </button>
+                            <div class="utility-btn" data-id="vanilla">
+                                <div class="minus-btn">
+                                    <img src="/img/icon-decrement-quantity.svg" alt="icon-decrement-quantity" onclick="subCart('vanilla')">
+                                </div>
+                                <p class="count" data-id="vanilla">1</p>
+                                <div class="plus-btn">
+                                    <img src="/img/icon-increment-quantity.svg" alt="icon-decrement-quantity" onclick="addCart('vanilla')" >
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                        <div class="main-details">
+                                <p>Panna Cotta</p>
+                                <h4>Vanilla Panna Cotta</h4>
+                                <span id="price">$6.50</span>
+                        </div>
+                    </div>
+
+
+                </div>
+               
+            </div>
+            <div class="side-hero">
+                <div class="cart" id="cart">
+                    <h3 id="cart-title">Your Cart (0)</h3>
+                </div>
+                <div class="cart-img" id="cart-img">
+                    <img src="img/illustration-empty-cart.svg" alt="illustration-empty-cart">
+                </div>
+                <div class="cart-text" id="cart-text">
+                    <p class="cart-tex">Your added items will appear here</p>
+                </div>
+               <div class="add-info">
+                     <div class="total-order">
+                        <p>Order Total</p>
+                        <h4 class="total-sum">$0.00</h4>
+                    </div>
+                    <div class="deliv-details">
+                        <img src="/img/icon-carbon-neutral.svg" alt="icon-carbon-neutral">
+                        <p>This is a <b>carbon neutral</b> delivery</p>
+                    </div>
+                    <button onclick="submitBtn()">Confirm Order</button>
+               </div>
+
+            </div>
+        </div>
+        <div class="order-confirm">
+            <div class="confirm-img">
+                    <img src="/img/icon-order-confirmed.svg" alt="icon-order-confirmed">
+                </div>
+                <div class="confirm-text">
+                    <h2>Order Confirmed</h2>
+                    <p>We hope you enjoy your food!</p>
+                </div>
+            <div class="confirm-container">
+                
+                <div id="confirm-items">
+                    
+                </div>
+                
+            </div>
+             <div class="total-order">
+                        <p>Order Total</p>
+                        <h4 class="total-sum">$0.00</h4>
+                </div>
+                <button onclick="newOrder()">Start New Order</button>
+
+        </div>
+    </section>
+
+    <!-- <script>
+  // Cart state
+  const cartItems = [];
+
+  // DOM Elements
+  const cart = document.getElementById('cart');
+  const cartImg = document.getElementById('cart-img');
+  const cartText = document.getElementById('cart-text');
+  const cartTitle = cart.querySelector('h3');
+
+  // Add to cart function
+  function addToCart(name, price) {
+    cartItems.push({ name, price });
+    updateCartDisplay();
+  }
+
+  // Update cart UI
+  function updateCartDisplay() {
+    // Update cart title with item count
+    cartTitle.textContent = `Your Cart (${cartItems.length})`;
+
+    // Clear previous cart items (but keep the title)
+    const previousItems = cart.querySelectorAll('.cart-item, .cart-total');
+    previousItems.forEach(item => item.remove());
+
+    // Empty cart state
+    if (cartItems.length === 0) {
+      cartImg.style.display = 'block';
+      cartText.style.display = 'block';
+    } else {
+      cartImg.style.display = 'none';
+      cartText.style.display = 'none';
+
+      // Display each cart item
+      cartItems.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.style.padding = '8px 0';
+        div.innerHTML = `<p><strong>${item.name}</strong> - $${item.price.toFixed(2)}</p>`;
+        cart.appendChild(div);
+      });
+
+      // Display total
+      const total = cartItems.reduce((sum, item) => sum + item.price, 0);
+      const totalDiv = document.createElement('div');
+      totalDiv.className = 'cart-total';
+      totalDiv.style.marginTop = '10px';
+      totalDiv.innerHTML = `<p><strong>Total:</strong> $${total.toFixed(2)}</p>`;
+      cart.appendChild(totalDiv);
+    }
+  }
+
+  // Initialize cart
+  updateCartDisplay();
+</script> -->
+<script src="/mainjs/main.js"></script>
+</body>
+</html>
